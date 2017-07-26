@@ -1,0 +1,54 @@
+{
+  "pages":[
+    "pages/sy/sy",
+    "pages/a1/a1",
+    "pages/top/top",
+    "pages/aa/aa",
+    "pages/shou/shou",
+    "pages/yanyuan/yanyuan",
+    "pages/lishi/lishi",
+     "pages/skin/skin",
+    "pages/yao/yao",
+     "pages/my/my"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#39B0FF",
+    "navigationBarTitleText": "我的小程序",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+     "color": "#fff",
+     "backgroundColor": "#39B0FF",
+     "borderStyle": "black",
+     "selectedColor": "#e9e9e9",
+     "list": [
+      
+       {
+        "pagePath": "pages/sy/sy",
+        "text": "热映",
+        "iconPath": "imgs/ico/popular_icon.png",
+        "selectedIconPath": "imgs/ico/popular_active_icon.png"
+      },
+      {
+        "pagePath": "pages/a1/a1",
+        "text": "待映",
+        "iconPath": "imgs/ico/coming_icon.png",
+        "selectedIconPath": "imgs/ico/coming_active_icon.png"
+      },
+      {
+        "pagePath": "pages/top/top",
+        "text": "热门",
+        "iconPath": "imgs/ico/top_icon.png",
+        "selectedIconPath": "imgs/ico/top_active_icon.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "imgs/ico/my_icon.png",
+        "selectedIconPath": "imgs/ico/my_active_icon.png"
+      }
+
+     ]
+  }
+}

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/goushi.css" />
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/vue.js"></script>
+		<script type="text/javascript" src="js/vue-router.js"></script>
+		<script>
+			sethtmlfontsize(16);
+
+			function sethtmlfontsize(n) {
+				var width = window.screen.width,
+					html = document.getElementsByTagName("html")[0];
+				html.style.fontSize = width / n + "px";
+			}
+		</script>
+
+	</head>
+
+	<body id="body">
+
+		<template id="home">
+			<div class="body container-fluid ">
+				<div class="row">
+					<div class="head col-xs-8 col-xs-offset-2">
+						<nav>
+							<div class="logo">
+
+								<a href="javascript:void(0)"><i class="glyphicon glyphicon-send"></i></a>
+
+							</div>
+							<ul class="nav nav-pills">
+								<li>
+									<router-link id="head_a" to='/useA'>首页</router-link>
+								</li>
+								<li>
+									<router-link to='/useB'>新闻中心</router-link>
+								</li>
+								<li>
+									<router-link to='/useC'>公司介绍</router-link>
+								</li>
+
+							</ul>
+
+						</nav>
+					</div>
+				</div>
+
+				<transition name="rightMove">
+					<router-view></router-view>
+				</transition>
+
+			</div>
+
+		</template>
+
+		<template id="useA">
+			<div v-bind:key="" class="bodyA ">
+				<img src="img/t01a3e7f32918431452.jpg" />
+				<div class="bodyA-diva col-xs-8 col-xs-offset-2 ">
+					<div class="row bodyDiv ">
+
+						<div class="col-xs-4 col-xs-offset-2 border">
+							<h5>集团介绍 </h5>
+							<a href="javascript:void(0)"><img src="img/img02.jpg" width="100%" height="67" /></a>
+							<p>
+								<a href="javascript:void(0)">xxxxx有限公司成立于2002年，是一家经省建设厅批准设立的二级资质房地产综合开发企业，公司注册资本…</a>
+							</p>
+						</div>
+						<div class="col-xs-4 border ">
+							<h5>新闻中心 </h5>
+							<h6>府尚公馆欢迎业主回家</h6>
+							<p>
+								<a href="javascript:void(0)">历经1000多个日夜的精心打磨，府尚公馆犹如一颗璀璨的巨星，闪耀…</a>
+							</p>
+
+						</div>
+
+						<div class="col-xs-8 col-xs-offset-2">
+							<img src="img/img01.jpg" width="100%" height="138" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</template>
+		<template id="useB">
+			<div class="bodyA ">
+				<img src="img/t011b0fc9b1b28da5eb.jpg" />
+				<div class="bodyA-diva col-xs-8 col-xs-offset-2 ">
+					<div class="row bodyDiv  ">
+						<div class="page-header col-xs-10 col-xs-offset-1">
+						 <h1>新闻中心 </h1>
+						</div>
+						<div class="media col-xs-8 col-xs-offset-2">
+							<div class="media-left">
+								<a href="#">
+									<img class="media-object media-img " src="img/b9a06bea308a5999c25cb2599bd089c1.jpg" alt="...">
+								</a>
+							</div>
+							<div class="media-body ">
+								<h4 class="media-heading ">小黄车带链"上岗"</h4>
+								<p>南宁市南铁四街玫瑰苑小区有一段100多米的消防通道，经常有居民私设障碍物占地使用。最近，不知是什么人， 竟然想出如此计策：把共享自行车用铁链锁起来占位泊车...
+								</p>
+							</div>
+
+						</div>
+						<div class="media col-xs-8 col-xs-offset-2">
+							<div class="media-left">
+								<a href="#">
+									<img class="media-object media-img " src="img/b9a06bea308a5999c25cb2599bd089c1.jpg" alt="...">
+								</a>
+							</div>
+							<div class="media-body ">
+								<h4 class="media-heading ">小黄车带链"上岗"</h4>
+								<p>南宁市南铁四街玫瑰苑小区有一段100多米的消防通道，经常有居民私设障碍物占地使用。最近，不知是什么人， 竟然想出如此计策：把共享自行车用铁链锁起来占位泊车...
+								</p>
+							</div>
+
+						</div>
+						<div class="media col-xs-8 col-xs-offset-2">
+							<div class="media-left">
+								<a href="#">
+									<img class="media-object media-img " src="img/b9a06bea308a5999c25cb2599bd089c1.jpg" alt="...">
+								</a>
+							</div>
+							<div class="media-body ">
+								<h4 class="media-heading ">小黄车带链"上岗"</h4>
+								<p>南宁市南铁四街玫瑰苑小区有一段100多米的消防通道，经常有居民私设障碍物占地使用。最近，不知是什么人， 竟然想出如此计策：把共享自行车用铁链锁起来占位泊车...
+								</p>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</template>
+		<template id="useC">
+			<div class="bodyA ">
+				<img src="img/t019539a9d5425e9bf4.jpg" />
+				<div class="bodyA-diva col-xs-8 col-xs-offset-2 ">
+					<div class="row bodyDiv ">
+                       <div class="media col-xs-8 col-xs-offset-2">
+							<div class="page-header">
+						 <h1>公司介绍 </h1>
+						</div>
+							<div class="media-body ">
+								
+								<p>深圳能源集团股份有限公司前身系深圳市能源集团有限公司（成立于1991年6月，简称：深能集团）。深能集团作为发起人募集设立深圳能源投资股份有限公司，公司股票于1993年9月在深圳证券交易所上市，简称：深圳能源，股票代码：000027,是全国电力行业第一家在深圳上市的大型股份制企业，也是深圳市第一家上市的公用事业股份公司。
+2007年12月20日，深圳能源投资股份有限公司通过非公开发行股票收购深圳市能源集团有限公司的股权和资产，实现了深圳市能源集团有限公司的整体上市，开创了国内电力公司整体上市的先河，公司的资产规模、竞争实力得到大幅提升。2008年4月7日，深圳能源投资股份有限公司更名为深圳能源集团股份有限公司。
+深圳能源现有总股本为3,964,491,597股，其中深圳市人民政府国有资产监督管理委员会持有1,896,000,775股，占总股本的47.82％，华能国际电力股份有限公司持有991,741,659股，占总股本的25.02％，其他股东持有1,076,749,163股，占总股本的27.16％。
+深圳能源自成立以来，紧紧把握时代脉搏，科学选定战略方向，优化治理、控制风险，保持有效增长、创造国际领先，全力打造“责任能源、实力能源、环保能源、和谐能源”。截至2016年底，深圳能源（含受托管理的深能集团资产）总资产627亿元，净资产270亿元，控股装机容量946.9万千瓦，主要电厂有深圳妈湾电厂（191万千瓦）、广东河源电厂（120万千瓦）、深圳东部电厂（117万千瓦）、东莞广深沙角B电厂（70万千瓦）、珠海洪湾电厂（36万千瓦）、东莞樟洋电厂（36万千瓦）、惠州丰达电厂（36万千瓦）、加纳燃机电厂（38万千瓦）。集团积极拓展新能源产业，2012年实现太阳能发电零突破，2014年实现水电零突破，截至2016年底，已投产49.3万千瓦太阳能发电项目、51.6万千瓦风电项目、72.5万千瓦水电项目，集团清洁能源占总容量的比例进一步提高至58.28%。在大力拓展电力主业的同时，深圳能源坚持最高环保标准，以垃圾处理产业为依托，积极发展能源环保产业，目前已建成投产或收购深圳、武汉、福建龙岩等6座垃圾焚烧发电厂，集团垃圾日处理能力达7150吨，排放指标均达到欧盟标准，其中宝安垃圾发电厂（4200吨/日）是目前国内最大、排放标准最高的垃圾焚烧发电厂，广西桂林、广东潮安、山东单县等多个垃圾发电项目陆续开工建设，同时积极推进湖南、山东、浙江等多个省份及海外垃圾发电项目前期工作，努力实现海外布局。深圳能源现辖34家成员企业，形成能源电力、能源环保、城市燃气等相关产业综合发展的战略格局，主要经营指标连续多年位居全国同行业前列，连续多年入选中国工业企业500强，在产业市场和资本市场上树立起“诚信、绩优、规范、环保”的良好形象。
+深圳能源先后荣获全国先进基层党组织、全国“五一”劳动奖状、中国服务业企业500强、《财富》中国500强、全国内部审计先进集体、广东省先进基层党组织、广东省“四好”领导班子先进集体、广东省“五一”劳动奖状、广东省环境保护先进集体、改革开放30年广东省功勋企业、广东省企业500强、深圳经济特区30年杰出贡献企业、联合国工发组织能源与环境促进事业国际合作奖、联合国工发组织全球新型城镇化建设新能源示范企业、达沃斯论坛“全球成长型公司”、最受投资者尊重的百强上市公司、低碳中国突出贡献企业、中国品牌绿色贡献奖、国家级企业管理创新成果奖、主板上市公司最佳董事会、上市公司监事会卓有成效30强、信息披露优秀单位、深圳质量建设特别贡献奖、深圳百强企业等荣誉称号。公司所属宝安垃圾发电厂二期工程荣获我国工程建设领域最高奖项—“国家优质工程金质奖”，创行业首例。
+								</p>
+							</div>
+
+						</div>
+                       
+                       
+					</div>
+				</div>
+			</div>
+		</template>
+
+		<div id="app">
+
+			<router-view> </router-view>
+
+		</div>
+
+	</body>
+	<script>
+		var home = {
+			template: '#home'
+
+		};
+		var useA = {
+			template: '#useA'
+
+		};
+		var useB = {
+			template: '#useB'
+
+		};
+		var useC = {
+			template: '#useC'
+
+		};
+
+		var router = new VueRouter({
+			routes: [{
+				path: '/',
+				component: home,
+
+				children: [{
+						path: 'useA',
+						component: useA
+					},
+					{
+						path: 'useB',
+						component: useB
+					},
+					{
+						path: 'useC',
+						component: useC
+					},
+
+				]
+			}]
+		})
+
+		new Vue({
+			el: "#app",
+			router: router,
+			mounted:function  () {
+				document.getElementById("head_a").click();
+			}
+		})
+	</script>
+
+</html>

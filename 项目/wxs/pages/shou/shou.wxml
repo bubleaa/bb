@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="hade">
+    <view class="inpu-l">默认</view>
+    <view >
+      <input bindinput="inputext" class="hade-inpu" type="text" placeholder="请输入电影标题,演员和导演" placeholder-class="hade-in"  />
+    </view>
+    <view class="inpu-r" bindtap="getshou">搜索</view>
+  </view>
+  <view class="body">
+    <view class="body-B-he">热门搜索</view>
+    <view class="movie-li-type">
+     <block wx:for="{{doban}}" wx:key="{{index}}">
+               <text bindtap="tapA"  data-id="{{item.id}}" >{{item.title}}</text>
+       </block>
+    </view>
+
+  </view>
+   <scroll-view class="foot-ul"  >
+   <block wx:for="{{shou}}" wx:key="{{index}}">
+    <view class="foot-li" bindtap="tapA"  data-id="{{item.id}}">
+      <view class="foot-li-img">
+        <image src="{{item.images.large}}"></image>
+      </view>
+      <view class="foot-li-p">{{item.title}}</view>
+    </view>
+   </block>
+  </scroll-view>
+</view>

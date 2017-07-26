@@ -1,0 +1,102 @@
+.container {
+  height: 100%;
+   box-sizing: border-box;
+}
+.hade{
+  color: #fff;
+ width:90% ;
+ height: 500rpx;
+  position: relative;
+  padding:100rpx 5%; 
+}
+.body, .body-A{
+  width: 100%;
+  background-color: #fff;
+}
+.hade-ba{
+  position:absolute ;
+  z-index: -99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:160% ;
+  filter: blur(10rpx);
+}
+.hade-img{
+  width:300rpx;
+  height:500rpx;
+  float:left;   
+}
+.hade-p{
+   float:left;
+    width:350rpx;
+    font-size:30rpx ;
+}
+.hade-p-h{
+  font-weight: bold;
+  font-size:36rpx 
+}
+.hade-img image{
+
+  width: 100%;
+  height: 100%;
+}
+.hade-p view{
+  padding:20rpx 
+
+}
+.body-A{
+  padding:20rpx 0; 
+}
+.body-A>view{
+  text-align: center;
+ width:32.999%;
+ float: left ;
+ color: #999;
+ border-right:1rpx solid #666; 
+}
+.body-A>view:last-child{
+ border-right:none; 
+}
+.body-B {
+  padding: 30rpx;
+  margin-top: 70rpx;
+}
+.body-B-he{
+  padding: 10rpx; font-weight: bold; 
+  border-left: 10rpx solid #3ead6b;
+
+}
+.body-B-bo{
+  font-size:30rpx; 
+  padding-top:20rpx;
+  line-height: 60rpx;
+}
+.foot{
+   width:90% ;
+  position: relative;
+  padding:10rpx 5%; 
+}
+.foot-ul{
+  height:500rpx;
+  width:100%;
+ white-space:nowrap;
+ padding:30rpx 0; 
+}
+.foot-li{
+  width:300rpx;
+  
+  display:inline-block;
+   margin-left:50rpx ;
+}
+.foot-li:first-child{
+margin-left:0 ;
+}
+.foot-li-img,.foot-li-img>image{
+  height:400rpx;
+  width:100%;  
+}
+.foot-li-p{
+  padding:10rpx 0; 
+  text-align: center;
+}

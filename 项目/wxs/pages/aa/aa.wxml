@@ -1,0 +1,57 @@
+<view class="container">
+  <view class="hade">
+    <view class="hade-img">
+      <image src="{{text.images.large}}"  />
+    </view>
+    <view class="hade-p">
+      <view class="hade-p-h">{{text.title}}</view>
+      <view>
+        导演:<text bindtap="tapC"  data-id="{{text.directors[0].id}}" >{{text.directors[0].name}}</text>
+      </view>
+      <view>
+        演员:
+     <block  wx:for="{{text.casts}}" wx:for-item="a2"  wx:key="{{index}}">
+        <text bindtap="tapC"  data-id="{{a2.id}}">{{a2.name}}{{index == text.casts.length-1?'':'/'}}</text>
+      </block>
+    </view>
+    <view>评分:{{text.rating.average}}分</view>
+    <view>上映年份:{{text.year}}</view>
+  </view>
+  <image class="hade-ba" src="{{text.images.large}}"  />
+</view>
+
+<view class="body">
+  <view class="body-A">
+    <view>
+      <view>{{text.collect_count}}</view>
+      <view>看过</view>
+    </view>
+    <view class="body-A-ll">
+      <view>{{text.wish_count}}</view>
+      <view>想看</view>
+    </view>
+    <view>
+      <view>{{text.ratings_count}}</view>
+      <view>评分人数</view>
+    </view>
+  </view>
+  <view class="body-B">
+    <view class="body-B-he">剧情介绍</view>
+    <view class="body-B-bo">{{text.summary}}</view>
+  </view>
+</view>
+
+<view class="foot">
+  <view class="body-B-he">相关电影</view>
+  <scroll-view class="foot-ul" scroll-x="true">
+    <block wx:for="{{text.casts}}" wx:for-item="a1" wx:key="{{index}}">
+      <view class="foot-li" bindtap="tapC"  data-id="{{a1.id}}">
+        <view class="foot-li-img">
+          <image src="{{a1.avatars.large}}"></image>
+        </view>
+        <view class="foot-li-p">{{a1.name}}</view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+</view>

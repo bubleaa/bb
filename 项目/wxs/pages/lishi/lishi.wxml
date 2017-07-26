@@ -1,0 +1,50 @@
+<view class="container">
+  <view class="hede">
+    <view class="{{text=='1'?'a':''}}" bindtap="tapli1">电影</view>
+    <view class="{{text=='2'?'a':''}}" bindtap="tapli2">影人</view>
+  </view>
+  <view class="body">
+    <view wx:if="{{text=='1'}}">
+      <view class="body-ul">
+        <view class="body-ul-ha">
+          <text>2017-01-02</text>
+        </view>
+        <view class="body-li">
+          <view class="body-li-t">22.33.55</view>
+          <view class="body-li-img">
+            <image src="http://p3.so.qhimgs1.com/sdr/864_1080_/t0119876f6ea31d41c3.jpg" />
+          </view>
+          <view class="body-li-p">
+            <view class="body-li-p-h">刘德华</view>
+            <view>
+              导演:<text bindtap="tapC"  data-id="" >好尴尬</text>
+            </view>
+            <view>
+              演员:<text bindtap="tapC"  data-id="">哈哈哈</text>
+            </view>
+            <view>评分:20分</view>
+            <view>上映年份:2017</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{text=='2'}}">
+      <view class="body-ul">
+        <view class="body-ul-ha">
+          <text>2017-01-02</text>
+        </view>
+        <view class="body-li">
+          <view class="body-li-t">22.33.55</view>
+          <view class="body-li-img body-li-img2">
+            <image src="http://img16.3lian.com/gif2016/q36/2/d/41.jpg"  />
+          </view>
+          <view class="body-li-p">
+            <view class="body-li-p-h">刘德华</view>
+            <view>评分:20分</view>
+            <view>上映年份:2017</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

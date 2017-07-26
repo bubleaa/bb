@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="hade">
+    <view class="hade-img">
+      <image src="{{texta.avatars.large}}"  />
+    </view>
+    <view class="hade-p">
+      <view > <text class="hade-p-a">{{texta.name}}</text> </view>
+      <view>{{texta.name_en}}</view>
+      <view>{{texta.born_place}}</view>
+    </view>
+    <image class="hade-ba" src="{{texta.avatars.large}}"  />
+  </view>
+  <view class="body">
+  <view class="body-B-he">相关电影</view>
+    <scroll-view class="foot-ul" scroll-x="true">
+    <block wx:for="{{texta.works}}" wx:key="index"   >
+      <view class="foot-li" bindtap="tapA"  data-id="{{item.subject.id}}" >
+        <view class="foot-li-img">
+          <image src="{{item.subject.images.large}}"></image>
+        </view>
+        <view class="foot-li-p">{{item.subject.title}}</view>
+      </view>
+     </block>
+    </scroll-view>
+  </view>
+</view>

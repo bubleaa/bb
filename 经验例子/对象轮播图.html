@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style>
+			*{ margin: 0px; padding: 0px;
+				
+			}
+			
+			#img{ width:500px ; position: relative;height:400px ; margin: 0 auto; 
+				
+			}
+			
+			#img img {width:500px ;height:400px ;position: absolute; z-index: -1; 
+				
+			}
+			#img .xs1{ display:inline-block ;
+				
+			}
+			#img a{ display: inline-block; width: 10px; height:10px ; border-radius:5px; background-color: #FFFFFF; margin:370px 2px 0px ; 
+			}
+			 #img #al{ margin-left:200px ;
+			 	
+			 }
+			 #img .xs2 { background-color: #00FFFF;
+			 	
+			 }
+			#img .aa{  width: 50px; height:50px ;border-radius:25px;  float: left;  text-decoration: none;position: absolute; top:175px ; margin: 0px; text-align: center;line-height:50px ;
+			 	 ;font-size: 25px;   color: #000000; opacity:0.5 ; left: 20px;
+			 }
+			  #img .ar{ left:430px ; 
+			 	
+			 }
+			 
+		</style>
+		<script type="text/javascript" src="js/new_file.js" ></script>
+	</head>
+	<body>
+		
+		<div id="img">
+			<img class="xs1" src="img/1.jpg"/>
+			<img src="img/2.jpg"/>
+			<img src="img/3.jpg"/>
+			<img src="img/4.jpg"/>
+			<img src="img/5.jpg"/>
+			
+			<a id="al" class="xs2" href="#"></a>
+			<a href="#"></a>
+			<a href="#"></a>
+			<a href="#"></a>
+			<a href="#"></a>
+			
+			<a  class="aa" href="#"> < </a>
+			<a class="aa ar"  href="#"> > </a>
+			
+		</div>
+		
+		
+		
+	</body>
+	<script>
+		
+		var lbt ={
+			dimg:this.getElementById("img"),
+			imgs:this.getElementsByTagName("img"),
+			das:this.getElementsByTagName("a"),
+			imgmun:0,
+			dsqkg:null,
+			imglb:function(){
+				    this.imgbd(++this.imgmun);
+				    
+					
+			},//执行轮播
+			
+			imgbd:function(a){
+				for( var i=0; i< this.imgs.length;i++){
+					if(a>= this.imgs.length){
+						  this.imgmun=0;
+						 a=0;
+					}
+					if(a==i){
+						move(this.imgs[i],{opacity:100});
+						this.das[i].className="xs2";
+						}else{
+						this.das[i].className="";	
+					   move(this.imgs[i],{opacity:0});
+					}
+				}
+				
+			},//根据a的数值显示图片 和小圆点;
+			
+			divsj:function(){
+				var _this=this;
+				 _this.dsqkg=setInterval(
+						function(){
+						 _this.imglb();
+					}
+					,1000)//开定时器
+				 
+				 _this.adj();
+				 _this.dimg.onmouseenter=function(){
+				   clearInterval(_this.dsqkg);
+				  
+				} 
+				//鼠标移入div关定时器
+				 _this.dimg.onmouseleave=function(){
+					_this.dsqkg=setInterval(
+						function(){
+						_this.imglb();
+					},1000)//鼠标移出div开定时器
+				}
+			},
+			 adj:function(){
+			 	
+			 	var _this=this;
+			 	
+		   	for( var i=0; i<_this.imgs.length;i++){
+		   	
+		   	(function (a){
+		   	 _this.das[a].onclick=function(){
+		   		
+		   		_this.imgbd(a);
+		   		_this.imgmun=a;
+		   	} //小圆点事件
+		   	
+		   	})(i);}
+		   	
+		   	_this.das[5].onclick=function(){
+		   		if(--_this.imgmun<0){
+		   			_this.imgmun=_this.imgs.length-1;
+		   		}
+		   		
+		   		console.log(_this.imgmun)
+		   		_this.imgbd(_this.imgmun);
+		   				   } 
+		   				   //上一个图片事件
+		   	_this.das[6].onclick=function(){
+		   		
+		   		
+		   	
+		   		_this.imgbd(++_this.imgmun);
+		   		console.log(_this.imgmun);
+		  	   } //下一个图片事件
+		   }
+			};
+		
+		  
+		
+		
+		
+			lbt.divsj();
+		
+		   
+		
+	</script>
+</html>

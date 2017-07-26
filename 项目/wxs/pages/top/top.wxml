@@ -1,0 +1,11 @@
+
+  <scroll-view class="foot-ul" scroll-y="true" scroll-top="0" bindscrolltolower="boot" lower-threshold="10" >
+   <block wx:for="{{doban}}" wx:key="{{index}}">
+    <view class="foot-li" bindtap="tapA"  data-id="{{item.id}}">
+      <view class="foot-li-img">
+        <image src="{{item.images.large}}"></image>
+      </view>
+      <view class="foot-li-p">{{item.title}}</view>
+    </view>
+   </block>
+  </scroll-view>

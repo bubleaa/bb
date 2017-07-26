@@ -1,0 +1,81 @@
+.container {
+  height: 100%;
+  padding: 0
+}
+.shou{
+ width:100%; 
+height: 80rpx;
+ position: relative;
+}
+.inpu{
+  width: 100%;
+ height: 80rpx;
+  font-size: 32rpx;
+  text-align: center;
+}
+.ico{
+  position: absolute;
+  top: 10rpx;
+  left: 20rpx;
+}
+.lbt,.lbt-sw-img{
+  width: 100%;
+  height: 100%;
+ 
+}
+.movie{
+  margin-top :10rpx; 
+   width: 100%;
+  height: 1000rpx;
+}
+.movie-h1{
+   color: #999999;
+   text-align: left;
+   padding:10rpx;
+   border-bottom:1rpx solid #666666;
+   margin-bottom:10rpx; 
+}
+.movie .movie-li{
+  margin-left:10rpx ;
+   overflow:hidden;
+   width: 355rpx;
+  height: 610rpx;
+  border: 1rpx snow #000;
+  border-radius:10rpx ; 
+  float: left;
+  text-align: center;
+  font-size: 30rpx;
+  background-color: #fff;
+}
+.movie-li-img,.movie-li-img image{
+   width: 100%;
+   height: 500rpx;
+}
+.movie-li-img{
+  position: relative;
+}
+.movie-li-imgh{
+  
+  width: 100%;
+  height: 50rpx;
+ text-align: right;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;left: 0;
+  color: #fff;
+
+}
+.movie-li-name{
+  padding:10rpx 0; 
+}
+.movie-li-type{
+   height: 50rpx;
+}
+.movie-li-type text{
+   border:1rpx solid #000;
+ padding:5rpx ;
+ font-size: 30rpx;
+ border-radius:10rpx ;
+ margin:0 10rpx; 
+
+}

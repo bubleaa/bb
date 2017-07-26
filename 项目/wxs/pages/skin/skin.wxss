@@ -1,0 +1,35 @@
+.main-wrap{
+    width:750rpx;
+}
+
+.skin-item{
+    overflow:hidden;
+    position:relative;
+    margin:20rpx auto 0;
+    width:714rpx;
+    height:360rpx;
+    border-radius:15rpx; 
+}
+.skin-item.active{
+    border:10rpx solid #51aa68;
+}
+.skin-item image{
+    display:block;
+    width:714rpx;
+    height:360rpx;
+}
+.skin-item .name{
+    box-sizing:border-box;
+    position:absolute;
+    z-index:10;
+    bottom:0;
+    left:0;
+    padding:0 40rpx;
+    width:100%;
+    height:80rpx;
+    background-color:rgba(0, 0, 0, .3);
+    font-size:32rpx;
+    line-height:80rpx;
+    color:#fff;
+
+}

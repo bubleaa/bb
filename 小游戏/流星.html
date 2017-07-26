@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			canvas{ border: 1px solid #000000;  background-color: #000000;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<canvas id="aa" width="500px" height="500px"></canvas>
+		
+	</body>
+	<script>
+		var canvas= document.getElementById("aa");
+		
+		var ctx = canvas.getContext("2d");
+		
+		var arr=[{x:3,y:100,i:0},{x:30,y:50,i:0}];
+		var i=0
+		var a = setInterval(function(){
+			ctx.clearRect(0,0,500,500);
+			if(i++%22==0){
+			var ar={x: parseInt(Math.random()*(300+100)-100),y: parseInt(Math.random()*300),i:0};
+			console.log(ar);
+			arr.push(ar);
+			};
+			
+		for (var y =0 ;y<arr.length;y++) {
+				
+		ctx.beginPath();
+	  
+		ctx.moveTo(arr[y].x+arr[y].i-20,arr[y].i-20);
+		ctx.lineTo(arr[y].x+arr[y].i,arr[y].i);
+		
+		ctx.lineWidth=3;
+	      ctx.shadowBlur=5;
+	      ctx.shadowColor="#FFFFFF";
+        ctx.shadowOffsetX= 0;
+	      ctx.shadowOffsetY=0;
+  var gra=ctx.createLinearGradient(arr[y].x+arr[y].i-25,arr[y].i-25,arr[y].x+arr[y].i,arr[y].i);
+   gra.addColorStop("0","rgba(255,255,255,0)");
+   gra.addColorStop("0.9","rgba(255,255,255,0.3)");
+   gra.addColorStop("1","rgba(255,255,255,1)");
+ 
+   ctx.strokeStyle=gra;
+   ctx.lineCap="round";
+	ctx.stroke();
+	ctx.closePath();
+	
+	if((arr[y].i+=2)==arr[y].y){
+		arr.splice(y,1);
+	};
+			}
+	
+	
+	},10);
+	</script>
+</html>

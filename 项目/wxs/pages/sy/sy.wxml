@@ -1,0 +1,33 @@
+<view class="container">
+    <view  class="shou">
+        <icon type="search" size="25" color="#666" class="ico"></icon>
+        <input bindfocus="tapB"  type="text" class="inpu" placeholder="请输入关键词搜索"  />
+    </view>
+    <view class="lbt"  data-id="12345">
+        <swiper class="lbt-sw" indicator-dots="true" indicator-color="#fff" indicator-active-color="#03f931"
+                circular="true" autoplay="true">
+            <block wx:for="{{imgs}}" wx:key="{{index}}">
+                <swiper-item>
+                    <image src="{{item.imgsrc}}" class="lbt-sw-img"  />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view class="movie">
+        <view class="movie-h1">正在热映</view>
+        <block wx:for="{{doban}}" wx:key="{{index}}">
+            <view class="movie-li" bindtap="tapA"  data-id="{{item.id}}">
+                <view class="movie-li-img">
+                    <image  src="{{item.images.large}}"  />
+                    <view class="movie-li-imgh">{{item.rating.average}}分</view>
+                </view>
+                <view class="movie-li-name">{{item.title}}</view>
+                <view class="movie-li-type">
+                    <block wx:for="{{item.genres}}" wx:for-item="adc" wx:key="{{index}}">
+                        <text>{{adc}}</text>
+                    </block>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

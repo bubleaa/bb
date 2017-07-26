@@ -1,0 +1,51 @@
+<view class="container">
+  <view class="hade">
+    <view class="hade-img">
+      <image src="http://p4.so.qhimgs1.com/t010d55b47d360d1ea4.jpg"  />
+    </view>
+    <view class="hade-p">
+      <view >
+        <text class="hade-p-a">xxx</text>
+        <image src="../my/ico/nan.png"></image>
+      </view>
+      <view>------</view>
+    </view>
+    <image class="hade-ba" src="{{text}}" />
+    <view class="hade-ph">
+      <image bindtap="gotoSkin" class="" src="../my/ico/skin-icon.png"  />
+    </view>
+  </view>
+  <view class="body">
+    <view class="body-li">
+      <view class="body-li-img">
+        <image src="../my/ico/meun-icon-1.png"></image>
+      </view>
+      <text class="body-li-p">收藏</text>
+    </view>
+   <view class="body-li" bindtap="taplishi">
+      <view class="body-li-img">
+        <image src="../my/ico/meun-icon-2.png"></image>
+      </view>
+      <text class="body-li-p">浏览记录</text>
+    </view>
+   <view class="body-li" bindtap="tapyao">
+      <view class="body-li-img">
+        <image src="../my/ico/meun-icon-3.png"></image>
+      </view>
+      <text class="body-li-p">摇一摇</text>
+    </view>
+   <view class="body-li">
+      <view class="body-li-img">
+        <image src="../my/ico/meun-icon-4.png"></image>
+      </view>
+      <text class="body-li-p">相册</text>
+    </view>
+   <view class="body-li">
+      <view class="body-li-img">
+        <image src="../my/ico/meun-icon-5.png"></image>
+      </view>
+      <text class="body-li-p">设置</text>
+    </view>
+   
+  </view>
+</view>

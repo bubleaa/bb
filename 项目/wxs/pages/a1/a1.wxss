@@ -1,0 +1,23 @@
+
+
+.foot-ul{
+  height:1000rpx;
+  width:100%;
+ white-space:nowrap;
+
+}
+.foot-li{
+  width:300rpx;
+  float: left;
+  display:block;
+   margin-left:50rpx ;
+}
+
+.foot-li-img,.foot-li-img>image{
+  height:400rpx;
+  width:100%;  
+}
+.foot-li-p{
+  padding:10rpx 0; 
+  text-align: center;
+}

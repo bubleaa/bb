@@ -1,0 +1,19 @@
+<view class="container">
+ 
+  <view class="body-ul">
+   
+    <view class="body-li">
+     
+      <view class="body-li-img body-li-img2">
+        <image src="http://img16.3lian.com/gif2016/q36/2/d/41.jpg"  />
+      </view>
+      <view class="body-li-p">
+        <view class="body-li-p-h">刘德华</view>
+        <view>评分:20分</view>
+        <view>上映年份:2017</view>
+      </view>
+       <view class="body-li-t"><text class="ya" bindtap="yao">摇一摇</text></view>
+    </view>
+  </view>
+  <image class="img" src="../yao/img/QQ图片20170721111246.png"></image>
+</view>

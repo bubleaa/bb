@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			
+			.lbt,.lbt img{ width:500px ; height:300px ;position: relative;margin:0px auto ;border-radius:10px ;
+				
+			}
+			.lbt img{position: absolute;top: 0px; left:0px ;
+				
+			}
+			.lbt ul{position: absolute;top: 85%; left:35% ; padding:0px 10px ; background-color: rgba(255,255,255,0.5);border-radius:10px ;margin:0px ;
+				
+			}
+			.lbt li{list-style: none; display: inline-block; width:15px ; height:15px ; background-color: white; margin:0px 5px ; border-radius:50% ;
+				
+			}
+			
+			.lbt a{text-decoration: none; font-size:24px ; position: absolute; display: inline-block; width:50px ; height: 70px;background-color:#000 ;
+			color:#fff ;line-height:70px ; text-align: center;opacity:0.1 ;	 top:40% ;
+			}
+			.lbt a:hover{opacity:0.3;
+					}
+			.lbt .r{ right:0px ;
+				
+			}
+			.lbt .lbtli{background-color:red;
+				
+			} 
+							
+		</style>
+		<script type="text/javascript" src="../js/jquery-1.12.2.js" ></script>
+		<script type="text/javascript" src="../js/jquery.lbt.js" ></script>
+		<script>
+			$(function  () {
+				$("#a").lbt();
+				$("#b").lbt();
+				
+			})
+			
+		</script>
+	</head>
+	<body>
+		<div id="a" class="lbt">
+			<img src="img/1.jpg"/>
+			<img src="img/2.jpg"/>
+			<img src="img/3.jpg"/>
+			<img src="img/4.jpg"/>
+			<img src="img/5.jpg"/>
+			<ul >
+			
+			</ul>
+			<a  href="#">&lt;</a>
+			<a class="r" href="#">&gt;</a>
+			
+		</div>
+		<div id="b" class="lbt">
+			<img src="img/1.jpg"/>
+			<img src="img/2.jpg"/>
+			<img src="img/3.jpg"/>
+			<img src="img/4.jpg"/>
+			<img src="img/5.jpg"/>
+			<ul >
+			
+			</ul>
+			<a  href="#">&lt;</a>
+			<a class="r" href="#">&gt;</a>
+			
+		</div>
+	</body>
+</html>

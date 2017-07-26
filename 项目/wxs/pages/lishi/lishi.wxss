@@ -1,0 +1,91 @@
+.container {
+  background-color: #e9e9e9;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding:  0;
+  box-sizing: border-box;
+}
+.hede{
+ text-align: center;
+ width:100%; 
+}
+.hede>view{
+ width:50%;
+float: left;
+padding:30rpx 0; 
+border-bottom:5rpx solid #666; 
+}
+.hede .a{
+  color: seagreen;
+  border-bottom:5rpx solid seagreen; 
+}
+.body-ul-ha{
+  
+ margin: 30rpx;
+  
+}
+.body-ul-ha text{
+    padding: 10rpx;
+  border-radius:10rpx; 
+  background-color:#fff; 
+}
+.body{
+   width: 100%;
+  height: 100%;
+  position:relative 
+}
+
+.body>view {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+ 
+}
+.body-li-p-h{
+  font-weight: bold;
+  font-size:46rpx 
+}
+.body-li-img{
+  width:300rpx;
+  height:500rpx;
+  float:left;   
+}
+.body-li-p{
+   float:left;
+    width:350rpx;
+    font-size:30rpx ;
+}
+
+.body-li-img image{
+ border-radius:20rpx; 
+  width: 100%;
+  height: 100%;
+}
+.body-li-p view{
+  padding:20rpx 
+
+}
+.body-li{
+  background-color: #fff;
+  border-radius:10%; 
+  text-align: left;
+  color: #000;
+ width:90% ;
+ height: 650rpx;
+  position: relative;
+  padding:0rpx 5%; 
+}
+.body-li-t{
+  width: 100%;
+  padding:20rpx ;
+  text-align: center;
+}
+.body-li .body-li-img2 image{
+   border-radius:50%; 
+    width: 200rpx;
+  height: 200rpx;
+}

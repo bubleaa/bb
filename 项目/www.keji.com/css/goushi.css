@@ -1,0 +1,89 @@
+.head{
+	position: absolute; top:1rem;
+	
+	padding:0.1rem 0;
+	z-index:9999 ;
+	background-color: rgba(255,255,255,0.5); 
+	border-radius:0.1rem ;
+}
+
+.head nav{
+position: relative;
+}
+.head ul{
+	float: left; padding-left:1rem;
+}
+li{ list-style: none;
+	
+}
+ul{ margin: 0px; padding:0px;
+	
+}
+html,body,.body,#app,.bodyA {width:100% ;height:100% ;
+	
+}
+.head .logo{
+	position: absolute;
+	top:0.1rem ;
+	left:0.1rem;
+
+	
+}
+.head .logo i{
+	font-size:0.2rem;
+}
+.body{
+	 position: relative;
+	margin: 0px;
+	padding: 0px;
+}
+.bodyA{position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.bodyA>img {
+	position: absolute;
+	left:0px ;
+	top:0px ;
+	width:100%
+}
+.bodyDiv{
+	
+}
+.bodyA-diva{
+	position: absolute;
+	left:-0.1rem ;
+	 top:2rem ;
+	 padding:0.5rem 0;
+	background-color:rgba(255,255,255,0.5);
+	border-radius:0.3rem ;
+}
+.rightMove-enter{
+				 opacity: 0;
+                 transform: translateX(-50%) rotateY(-87deg);
+			}
+.rightMove-enter-active,
+.rightMove-leave-active{
+				transition:all 1s ;
+			}
+.rightMove-leave-to{
+				opacity: 0;
+				transform: translateX(50%) rotateY(87deg);
+             
+			}
+#app{ overflow: hidden;position: relative;
+	
+}			
+.media-img{
+	width:1rem ;
+}			
+.media-div{
+	overflow: hidden; height:0.5rem;
+}
+#body{
+	 perspective:1000px;
+    -webkit-perspective:1000px;
+}
+	
+

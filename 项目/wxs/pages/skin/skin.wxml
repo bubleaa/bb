@@ -1,0 +1,12 @@
+<view class="main-wrap">
+    <view class="skin-list">
+        <block wx:for="{{skin}}" wx:key="{{index}}">
+            <view class="skin-item {{activeIndex == index?'active':''}}" data-index="{{index}}" bindtap="setSkin" data-skin="{{item.images}}">
+                <image src="{{item.images}}" />
+                <view class="name">
+                    {{item.name}}
+                </view>
+            </view>
+        </block>
+    </view>
+</view>
